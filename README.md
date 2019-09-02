@@ -12,17 +12,24 @@ Lay down bars based on these inputs:
 
 LayBars poem = new LayBars();
 
-poem.setBarCount(4);
-poem.setMeasuresPerBar(2);
-poem.setFeetPerMeasure(5);
-poem.setFootType("iamb");
+poem.setBarCount(4)
+
+poem.setMeasuresPerBar(2)
+
+poem.setFeetPerMeasure(5)
+
+poem.setFootType("iamb")
 
 poem.layBars();
 
 /// Example output
 
 Bar count: 4, Measures per bar: 2, Feet per measure: 5, Foot type:  */ 
+
 {  ((  */  |  */  |  */  |  */  |  */  |  ))  ((  */  |  */  |  */  |  */  |  */  |  ))  }
+
 {  ((  */  |  */  |  */  |  */  |  */  |  ))  ((  */  |  */  |  */  |  */  |  */  |  ))  }
+
 {  ((  */  |  */  |  */  |  */  |  */  |  ))  ((  */  |  */  |  */  |  */  |  */  |  ))  }
+
 {  ((  */  |  */  |  */  |  */  |  */  |  ))  ((  */  |  */  |  */  |  */  |  */  |  ))  }
