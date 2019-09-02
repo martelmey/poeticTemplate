@@ -33,3 +33,15 @@ Bar count: 4, Measures per bar: 2, Feet per measure: 5, Foot type:  */
 {  ((  */  |  */  |  */  |  */  |  */  |  ))  ((  */  |  */  |  */  |  */  |  */  |  ))  }
 
 {  ((  */  |  */  |  */  |  */  |  */  |  ))  ((  */  |  */  |  */  |  */  |  */  |  ))  }
+
+/// List of included meters
+
+trochee = /x
+iamb = x/
+spondee = //
+dactyl = /xx
+anapest = x/x
+primus = /xxx
+secundus = x/xx
+tertius = xx/x
+quartus = xxx/
