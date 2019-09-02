@@ -7,11 +7,11 @@ public class Main {
         LayBars poem = new LayBars();
 
         poem.setBarCount(4);
-        poem.setMeasuresPerBar(4);
+        poem.setMeasuresPerBar(2);
         poem.setFeetPerMeasure(5);
         poem.setFootType("iamb");
 
-        System.out.println(poem.layBars());
+        poem.layBars();
 
     }
 

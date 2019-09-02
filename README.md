@@ -10,21 +10,19 @@ Lay down bars based on these inputs:
 
 /// Example input
 
-poetemplate lay-bars {$BAR_COUNT} {$MEASURES_PER_BAR} {$FEET_PER_MEASURE} {$FOOT_TYPE}
+LayBars poem = new LayBars();
 
-poetemplate lay-bars 4 4 5 iamb
+poem.setBarCount(4);
+poem.setMeasuresPerBar(2);
+poem.setFeetPerMeasure(5);
+poem.setFootType("iamb");
+
+poem.layBars();
 
 /// Example output
 
-Bar count = 4
-Measures per bar = 4
-Feet per measure = 5
-Foot type = iamb
-
-{ ( */ | */ | */ | */ | */ | ) }
-
-{ ( */ | */ | */ | */ | */ | ) }
-
-{ ( */ | */ | */ | */ | */ | ) }
-
-{ ( */ | */ | */ | */ | */ | ) }
+Bar count: 4, Measures per bar: 2, Feet per measure: 5, Foot type:  */ 
+{  ((  */  |  */  |  */  |  */  |  */  |  ))  ((  */  |  */  |  */  |  */  |  */  |  ))  }
+{  ((  */  |  */  |  */  |  */  |  */  |  ))  ((  */  |  */  |  */  |  */  |  */  |  ))  }
+{  ((  */  |  */  |  */  |  */  |  */  |  ))  ((  */  |  */  |  */  |  */  |  */  |  ))  }
+{  ((  */  |  */  |  */  |  */  |  */  |  ))  ((  */  |  */  |  */  |  */  |  */  |  ))  }

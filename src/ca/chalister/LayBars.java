@@ -78,180 +78,96 @@ public class LayBars {
     }
 
     public void setFootType (String FOOT_TYPE) {
+         if ((FOOT_TYPE == "pyrrhus") || (FOOT_TYPE == "dibrach")) {
+             this.FOOT_TYPE = DY_PYYRHUS;
+         } else if ((FOOT_TYPE == "iamb") || (FOOT_TYPE == "iambus") || (FOOT_TYPE == "jambus")) {
+             this.FOOT_TYPE = DY_IAMB;
+         } else if ((FOOT_TYPE == "trochee") || (FOOT_TYPE == "choree") || (FOOT_TYPE == "choreus")) {
+             this.FOOT_TYPE = DY_TROCHEE;
+         } else if (FOOT_TYPE == "spondee") {
+             this.FOOT_TYPE = DY_SPONDEE;
+         } else if (FOOT_TYPE == "tribach") {
+             this.FOOT_TYPE = TRY_TRIBACH;
+         } else if (FOOT_TYPE == "dactyl") {
+             this.FOOT_TYPE = TRY_DACTYL;
+         } else if (FOOT_TYPE == "amphibrach") {
+             this.FOOT_TYPE = TRY_AMPHIBRACH;
+         } else if ((FOOT_TYPE == "anapest") || (FOOT_TYPE == "antidactylus")) {
+             this.FOOT_TYPE = TRY_ANAPEST;
+         } else if (FOOT_TYPE == "bacchius") {
+             this.FOOT_TYPE = TRY_BACCHIUS;
+         } else if ((FOOT_TYPE == "cretic") || (FOOT_TYPE == "amphimacer")) {
+             this.FOOT_TYPE = TRY_ANTIBACCHIUS;
+         } else if (FOOT_TYPE == "molossus") {
+             this.FOOT_TYPE = TRY_MOLOSSUS;
+         } else if ((FOOT_TYPE == "tetrabrach") || (FOOT_TYPE == "proceleusmatic")) {
+             this.FOOT_TYPE = TETRA_TETRABRACH;
+         } else if (FOOT_TYPE == "primus paeon") {
+             this.FOOT_TYPE = TETRA_PRIMUS;
+         } else if (FOOT_TYPE == "secundus paeon") {
+             this.FOOT_TYPE = TETRA_PRIMUS_SECUNDUS;
+         } else if (FOOT_TYPE == "tertius paeon") {
+             this.FOOT_TYPE = TETRA_PRIMUS_TERTIUS;
+         } else if (FOOT_TYPE == "quartus paeon") {
+             this.FOOT_TYPE = TETRA_PRIMUS_QUARTUS;
+         } else if ((FOOT_TYPE == "major ionic") || (FOOT_TYPE == "double trochee")) {
+             this.FOOT_TYPE = TETRA_IONIC_MAJOR;
+         } else if ((FOOT_TYPE == "minor ionic") || (FOOT_TYPE == "double iamb")) {
+             this.FOOT_TYPE = TETRA_IONIC_MINOR;
+         } else if (FOOT_TYPE == "ditrochee") {
+             this.FOOT_TYPE = TETRA_DITROCHEE;
+         } else if (FOOT_TYPE == "diiamb") {
+             this.FOOT_TYPE = TETRA_DIIAMB;
+         } else if (FOOT_TYPE == "choriamb") {
+             this.FOOT_TYPE = TETRA_CHORIAMB;
+         } else if (FOOT_TYPE == "antispast") {
+             this.FOOT_TYPE = TETRA_ANTISPAST;
+         } else if (FOOT_TYPE == "first epitrite") {
+             this.FOOT_TYPE = TETRA_EPITRITE_FIRST;
+         } else if (FOOT_TYPE == "second epitrite") {
+             this.FOOT_TYPE = TETRA_EPITRITE_SECOND;
+         } else if (FOOT_TYPE == "third epitrite") {
+             this.FOOT_TYPE = TETRA_EPITRITE_THIRD;
+         } else if (FOOT_TYPE == "fourth epitrite") {
+             this.FOOT_TYPE = TETRA_EPITRITE_FOURTH;
+         } else if (FOOT_TYPE == "dispondee") {
+             this.FOOT_TYPE = DISPONDEE;
+         } else {
+             System.out.println("Invalid string");
+         }
+    }
 
-        String footType = FOOT_TYPE.toLowerCase();
+    public int getBarCount () {
+        return this.BAR_COUNT;
+    }
 
-        switch (footType) {
-            case "pyrrhus", "dibrach":
-                footType = DY_PYYRHUS;
-            case "iamb", "iambus", "jambus":
-                footType = DY_IAMB;
-            case "trochee", "choree", "choreus":
-                footType = DY_TROCHEE;
-            case "spondee":
-                footType = DY_SPONDEE;
-            case "tribach":
-                footType = TRY_TRIBACH;
-            case "dactyl":
-                footType = TRY_DACTYL;
-            case "amphibrach":
-                footType = TRY_AMPHIBRACH;
-            case "anapest", "antidactylus":
-                footType = TRY_ANAPEST;
-            case "bacchius":
-                footType = TRY_BACCHIUS;
-            case "cretic", "amphimacer":
-                footType = TRY_CRETIC;
-            case "antibacchius":
-                footType = TRY_ANTIBACCHIUS;
-            case "molossus":
-                footType = TRY_MOLOSSUS;
-            case "tetrabrach", "proceleusmatic":
-                footType = TETRA_TETRABRACH;
-            case "primus paeon":
-                footType = TETRA_PRIMUS;
-            case "secundus paeon":
-                footType = TETRA_PRIMUS_SECUNDUS;
-            case "tertius paeon":
-                footType = TETRA_PRIMUS_TERTIUS;
-            case "quartus paeon":
-                footType = TETRA_PRIMUS_QUARTUS;
-            case "major ionic", "double trochee":
-                footType = TETRA_IONIC_MAJOR;
-            case "minor ionic", "double iamb":
-                footType = TETRA_IONIC_MINOR;
-            case "ditrochee":
-                footType = TETRA_DITROCHEE;
-            case "diiamb":
-                footType = TETRA_DIIAMB;
-            case "choriamb":
-                footType = TETRA_CHORIAMB;
-            case "antispast":
-                footType = TETRA_ANTISPAST;
-            case "first epitrite":
-                footType = TETRA_EPITRITE_FIRST;
-            case "second epitrite":
-                footType = TETRA_EPITRITE_SECOND;
-            case "third epitrite":
-                footType = TETRA_EPITRITE_THIRD;
-            case "fourth epitrite":
-                footType = TETRA_EPITRITE_FOURTH;
-            case "dispondee":
-                footType = DISPONDEE;
-            default:
-                System.out.println("Invalid string");
-        }
+    public int getMeasuresPerBar () {
+        return this.MEASURES_PER_BAR;
+    }
 
-        this.FOOT_TYPE = footType;
-
+    public int getFeetPerMeasure () {
+        return this.FEET_PER_MEASURE;
     }
 
     public String getFootType () {
-
         return this.FOOT_TYPE;
-
     }
 
-    public String layBars () {
+    public void layBars () {
 
-        Scanner input = new Scanner(System.in);
-
-        while (true) {
-
-            System.out.println("Enter bar count: ");
-
-            boolean hasNextInt = input.hasNextInt();
-
-            if (hasNextInt) {
-
-                this.BAR_COUNT = input.nextInt();
-
-            } else {
-
-                System.out.println(INVALID_MESSAGE_STRING);
-                break;
-
-            }
-
-            input.nextLine();
-
-            System.out.println("Enter measures per bar: ");
-
-            hasNextInt = input.hasNextInt();
-
-            if (hasNextInt) {
-
-                this.MEASURES_PER_BAR = input.nextInt();
-
-            } else {
-
-                System.out.println(INVALID_MESSAGE_STRING);
-                break;
-
-            }
-
-            input.nextLine();
-
-            System.out.println("Enter feet per measure: ");
-
-            hasNextInt = input.hasNextInt();
-
-            if (hasNextInt) {
-
-                this.FEET_PER_MEASURE = input.nextInt();
-
-            } else {
-
-                System.out.println(INVALID_MESSAGE_STRING);
-                break;
-
-            }
-
-            input.nextLine();
-
-            System.out.println("Enter feet type, as a string: ");
-
-            boolean hasNextString = input.hasNext(getFootType());
-
-            if (hasNextString) {
-
-                this.FOOT_TYPE = input.next();
-
-            } else {
-
-                System.out.println(INVALID_MESSAGE_STRING);
-                break;
-
-            }
-
-        }
+        System.out.println("Bar count: " + BAR_COUNT + ", Measures per bar: " + MEASURES_PER_BAR + ", Feet per measure: " + FEET_PER_MEASURE + ", Foot type: " + FOOT_TYPE);
 
         for (int bars = BAR_COUNT; bars > 0; bars--) {
-
-            System.out.println("{ ");
-
+            System.out.print("{ ");
             for (int measures = MEASURES_PER_BAR; measures > 0; measures--) {
-
-                System.out.println(" ( ");
-
+                System.out.print(" (( ");
                 for (int feet = FEET_PER_MEASURE; feet > 0; feet--) {
-
-                    System.out.println(FOOT_TYPE + " | ");
-
+                    System.out.print(FOOT_TYPE + " | ");
                 }
-
-                System.out.println(" ) ");
-
+                System.out.print(" )) ");
             }
-
-            System.out.println(" }");
+            System.out.print(" }");
+            System.out.println();
         }
-
-        String feetStructure = (FOOT_TYPE + " | ");
-        String measureStructure = (" ( " + feetStructure + " ) ");
-        String barStructure = ("{ " + measureStructure + " }");
-
-        return barStructure;
     }
-
 }
