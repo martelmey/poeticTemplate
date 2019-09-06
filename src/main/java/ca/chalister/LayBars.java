@@ -1,42 +1,43 @@
 package ca.chalister;
 
-import java.util.Scanner;
-
 public class LayBars {
 
     // Two syllables
-    private final String DY_PYYRHUS = " ** ";
-    private final String DY_IAMB = " */ ";
-    private final String DY_TROCHEE = " /* ";
-    private final String DY_SPONDEE = " // ";
+    // Section 2*
+    private final String DY_PYYRHUS = " ** ";               // 21
+    private final String DY_IAMB = " */ ";                  // 22
+    private final String DY_TROCHEE = " /* ";               // 23
+    private final String DY_SPONDEE = " // ";               // 242
 
     // Three syllables
-    private final String TRY_TRIBACH = " *** ";
-    private final String TRY_DACTYL = " /** ";
-    private final String TRY_AMPHIBRACH = "";
-    private final String TRY_ANAPEST = " */* ";
-    private final String TRY_BACCHIUS = " *// ";
-    private final String TRY_CRETIC = " /*/ ";
-    private final String TRY_ANTIBACCHIUS = " **/ ";
-    private final String TRY_MOLOSSUS = " *** ";
+    // Section 3*
+    private final String TRY_TRIBACH = " *** ";             // 31
+    private final String TRY_DACTYL = " /** ";              // 32
+    private final String TRY_AMPHIBRACH = " */* ";          // 33
+    private final String TRY_ANAPEST = " **/ ";             // 34
+    private final String TRY_ANTIBACCHIUS = " //* ";        // 372
+    private final String TRY_BACCHIUS = " *// ";            // 352
+    private final String TRY_CRETIC = " /*/ ";              // 362
+    private final String TRY_MOLOSSUS = " *** ";            // 38
 
     // Four syllables
-    private final String TETRA_TETRABRACH = " **** ";
-    private final String DISPONDEE = "////";
-    private final String TETRA_PRIMUS = " /*** ";
-    private final String TETRA_PRIMUS_SECUNDUS = " */** ";
-    private final String TETRA_PRIMUS_TERTIUS = " **/* ";
-    private final String TETRA_PRIMUS_QUARTUS = " ***/ ";
-    private final String TETRA_IONIC_MAJOR = " //** ";
-    private final String TETRA_IONIC_MINOR = " **// ";
-    private final String TETRA_DITROCHEE = " /*/* ";
-    private final String TETRA_DIIAMB = " */*/ ";
-    private final String TETRA_CHORIAMB = " /**/ ";
-    private final String TETRA_ANTISPAST = " *//* ";
-    private final String TETRA_EPITRITE_FIRST = " */// ";
-    private final String TETRA_EPITRITE_SECOND = " */** ";
-    private final String TETRA_EPITRITE_THIRD = " //*/ ";
-    private final String TETRA_EPITRITE_FOURTH = " ///* ";
+    // Section 4*
+    private final String TETRA_TETRABRACH = " **** ";       // 41
+    private final String DISPONDEE = "////";                // 42
+    private final String TETRA_PRIMUS = " /*** ";           // 43
+    private final String TETRA_PRIMUS_SECUNDUS = " */** ";  // 44
+    private final String TETRA_PRIMUS_TERTIUS = " **/* ";   // 45
+    private final String TETRA_PRIMUS_QUARTUS = " ***/ ";   // 46
+    private final String TETRA_IONIC_MAJOR = " //** ";      // 472
+    private final String TETRA_IONIC_MINOR = " **// ";      // 482
+    private final String TETRA_DITROCHEE = " /*/* ";        // 492
+    private final String TETRA_DIIAMB = " */*/ ";           // 4102
+    private final String TETRA_CHORIAMB = " /**/ ";         // 4112
+    private final String TETRA_ANTISPAST = " *//* ";        // 4122
+    private final String TETRA_EPITRITE_FIRST = " */// ";   // 4133
+    private final String TETRA_EPITRITE_SECOND = " */** ";  // 414
+    private final String TETRA_EPITRITE_THIRD = " //*/ ";   // 4153
+    private final String TETRA_EPITRITE_FOURTH = " ///* ";  // 4163
 
     private final String INVALID_MESSAGE_STRING = "Invalid value";
 

@@ -1,0 +1,80 @@
+https://english-super.blogspot.com/2012/12/determine-feet-in-line-of-poetry.html
+https://www.toeflgoanywhere.org/learn-these-4-word-stress-rules-improve-your-pronunciation
+
+- use a loop deliminated with whitespace to extract words from a sentence
+- count syllables for each word and return list of integers in place of words
+
+/// Variables:
+
+meterCode
+    [digit] [digit] ([digit])
+    [syllableCount] [meterNumber] ([stressCount 2-3])
+word
+    passed in singularly or extracted from a sentence
+wordStressPattern
+    string of * and / characters
+meterStressPattern
+
+
+/// How is a <word> matched up with <meter>?
+co-work-er = 3 syllables *-*-*
+<word> prepared for Section 3 meter due to having 3 syllables
+If <word> has 2 syllables or is a noun or is an adjective:
+Apply <stress-type-1> to first syllable and get <stress-pattern> /-*-*
+<word> has one stressed syllable, must belong to 2-digit meter code
+<word> gets associated with #32 /** (dactyl)
+
+/// Another way to match <word> with <meter>:
+und-erst-and = 3 syllables *-*-*
+<word> prepared for Section 3 <meter> due to having 3 syllables
+If <word> has 2 syllables or is a noun or is an adjective:
+If <word> has 2 syllables or is a verb:
+Apply <stress-type-2> to last syllable and get <stress-pattern> *-*-/
+<word> has one stressed syllable, must belong to 2-digit meter code
+Compare <stress-pattern> with <meter-pattern>s in the list to find match
+
+
+Step 1. ) Get word attributes
+	- noun, adjective, or verb
+	- suffix (ending)
+	- syllable count
+
+Step 2. ) Determine stress type
+	Stress type 1: first syllable
+		- word has 2 syllables
+		- word is a noun or adjective
+	
+	Stress type 2: last syllable
+		- word has 2 syllables
+		- word is a verb
+		
+	Stress type 3: second-to-last syllable
+		- word ends in *ic
+		- word ends in *sion or *tion
+		
+	Stress type 4: third-from-last syllable
+		- word ends in *cy, *ty, *phy, or *gy
+		- word ends in *al
+		- word has 3 syllables & ends with *er
+		
+Step 3. ) Get foot type
+
+Relevant meters:
+
+/
+/x  trochee
+x/  iamb
+//  spondee
+/xx     dactyl
+x/x     anapest
+xx/     amphibrach
+/xxx    primus
+x/xx    primus secundus
+xx/x    primus tertius
+xxx/    primus quartus
+
+/// references
+https://blog.rapidapi.com/dictionary-apis/
+https://developer.wordnik.com/
+https://stackoverflow.com/questions/38743222/dictionary-api-used-for-stressed-syllables
+https://github.com/search?q=syllables
